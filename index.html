@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaborative Presentation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+ 
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <div id="app" class="flex flex-col h-screen">
+    <!-- Navbar -->
+    <div class="bg-blue-500 text-white p-4 flex justify-between items-center">
+      <h1 class="text-lg font-bold">Collaborative Presentation</h1>
+      <span id="nickname-display" class="font-semibold"></span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex flex-grow">
+      <!-- Slides Panel -->
+      <div class="w-1/5 bg-gray-200 p-2">
+        <h2 class="font-bold text-gray-700 mb-4">Slides</h2>
+        <ul id="slides-list" class="space-y-2">
+          <!-- Slides will be dynamically populated -->
+        </ul>
+        <button id="add-slide" class="mt-4 bg-blue-500 text-white w-full py-2 rounded">Add Slide</button>
+      </div>
+
+      <!-- Slide Editor -->
+      <div class="flex-grow bg-white p-4 relative">
+        <div id="slide-content" class="h-full border border-gray-300 rounded shadow p-4 relative">
+          <!-- Editable text blocks will go here -->
+        </div>
+        <button id="add-text" class="absolute bottom-4 right-4 bg-green-500 text-white py-2 px-4 rounded">
+          Add Text Block
+        </button>
+      </div>
+
+      <!-- Users Panel -->
+      <div class="w-1/5 bg-gray-200 p-2">
+        <h2 class="font-bold text-gray-700 mb-4">Connected Users</h2>
+        <ul id="users-list" class="space-y-2">
+          <!-- Users will be dynamically populated -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./presentation.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
